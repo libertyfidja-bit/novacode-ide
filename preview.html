@@ -3,15 +3,17 @@
 <head>
   <style>
     body { font-family: system-ui, sans-serif; background: #0f172a; color: #f8fafc; padding: 24px; }
-    .card { background: #1e293b; border: 1px solid #334155; padding: 18px; border-radius: 12px; }
-    button { background: #3b82f6; color: white; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; }
+    .card { background: #1e293b; border: 1px solid #334155; padding: 20px; border-radius: 12px; max-width: 420px; }
+    .badge { display: inline-block; background: #22c55e22; color: #4ade80; border: 1px solid #22c55e55; padding: 3px 8px; border-radius: 999px; font-size: 12px; }
+    button { background: #3b82f6; color: white; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-weight: 600; margin-top: 12px; }
   </style>
 </head>
 <body>
   <div class="card">
-    <h2>Live App Preview</h2>
-    <p>Edit <code>preview.html</code> and click Run Code to update this live preview!</p>
-    <button onclick="this.textContent = 'Clicked at ' + new Date().toLocaleTimeString()">Test Interactive Button</button>
+    <span class="badge">Live Preview Active</span>
+    <h2>NovaCode Web Sandbox</h2>
+    <p>Edit <code>preview.html</code> to see instant live updates right here.</p>
+    <button onclick="this.textContent = 'Clicked at ' + new Date().toLocaleTimeString()">Test Interaction</button>
   </div>
 </body>
 </html>
