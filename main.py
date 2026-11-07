@@ -1,14 +1,20 @@
-# NovaCode Studio — Real Python 3.12 WebAssembly & Line-by-Line Debugger
-def calculate_order_total(items, tax_rate=0.08):
-    subtotal = 0
-    for name, price in items:
+# NovaCode Studio — Python 3.12 WebAssembly Engine
+def calculate_order_total(cart, tax_rate=0.08):
+    subtotal = 0.0
+    for item in cart:
+        name = item["name"]
+        price = item["price"] * item["qty"]
         subtotal += price
-        print(f"Added {name}: ${price:.2f} (Running Subtotal: ${subtotal:.2f})")
+        print(f"Added {item['qty']}x {name}: ${price:.2f}")
     
     discount = 15.0 if subtotal >= 100 else 0.0
     taxed_total = round((subtotal - discount) * (1 + tax_rate), 2)
-    return taxed_total
+    return {"subtotal": subtotal, "discount": discount, "total": taxed_total}
 
-cart = [("Mechanical Keyboard", 85.0), ("USB-C Hub", 45.0), ("Mousepad", 20.0)]
-final_bill = calculate_order_total(cart)
-print(f"Final Order Total: ${final_bill}")
+shopping_cart = [
+    {"name": "Mechanical Keyboard", "price": 75.0, "qty": 1},
+    {"name": "USB-C Hub", "price": 35.0, "qty": 2}
+]
+
+summary = calculate_order_total(shopping_cart)
+print("Final Summary:", summary)
