@@ -1,8 +1,5 @@
-# NovaCode Studio — Cloud IDE & Real Python Debugger
+# NovaCode Studio — Multi-Language Cloud IDE
 
-An independent, custom-branded Cloud IDE with real line-by-line Python debugging and remote Git repository sync.
-
-## Features
-1. **100% Custom Branded UI**: No third-party trademarked logos.
-2. **Real Python Execution & Line-by-Line Tracer**: Powered by Python `sys.settrace` / `bdb`.
-3. **Persistent Local & Remote Git Storage**: Saves files automatically.
+- **Zero Server Cost**: Runs Python 3.12 via WebAssembly (Pyodide) and JavaScript natively in the user's browser.
+- **Line-by-Line Debugger**: Click any line number to set red breakpoints and inspect live variables.
+- **On-Demand Extension Marketplace**: Users can download language packs and tools directly into their browser workspace.
